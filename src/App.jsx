@@ -1,14 +1,25 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
-import Swap from "./pages/Swap";
+import HomeA from "./pages/HomeA";
+import Signup from "./pages/Signup";
+import "./App.css";
+import Login from "./pages/Login";
+import CourseDetailsPage from "./pages/CourseDetailsPage";
+import CoursesPage from "./pages/CoursePage";
+
+
 
 const App = () => {
   return (
     <div>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/swap" element={<Swap />} />
+        <Route path="/h" element={<HomeA/>} />
+        <Route path="/s" element={<Signup/>} />
+        <Route path="/l" element={<Login/>} />
+        <Route path="/course/:id" element={<CourseDetailsPage/>} /> 
+        <Route path="/c" element={<CoursesPage/>} />
       </Routes>
     </div>
   );

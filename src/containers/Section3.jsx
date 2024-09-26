@@ -15,22 +15,7 @@ const Section3 = () => {
         </Title>
       </Container>
 
-      <Grid container spacing={5} sx={{ mt: 4 }} justifyContent="center">
-        {ITEMS.map(({ name, logo }) => (
-          <Grid item xs={4} md={3} lg={2.4} key={name}>
-            <Stack alignItems="center">
-              <img
-                src={logo}
-                style={{ height: "120px", objectFit: "contain" }}
-              />
-
-              <Typography variant="body2" color="text.secondary">
-                {name}
-              </Typography>
-            </Stack>
-          </Grid>
-        ))}
-      </Grid>
+      
     </Container>
   );
 };

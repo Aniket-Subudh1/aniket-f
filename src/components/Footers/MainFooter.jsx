@@ -47,65 +47,7 @@ const LinkSection = ({ title, links }) => (
 const Footer = () => {
   return (
     <Box>
-      <Divider sx={{ mb: 10 }} />
-
       <Container>
-        <Grid container spacing={8} flexWrap="wrap-reverse">
-          {/* Links */}
-          <Grid item xs={12} md={6} lg={7} xl={8}>
-            <Grid container spacing={2}>
-              {/* Protocols */}
-              <Grid item xs={6} sm={3} md={6} lg={3}>
-                <LinkSection {...protocols} />
-              </Grid>
-
-              {/* Governance */}
-              <Grid item xs={6} sm={3} md={6} lg={3}>
-                <LinkSection {...governance} />
-              </Grid>
-
-              {/* Support */}
-              <Grid item xs={6} sm={3} md={6} lg={3}>
-                <LinkSection {...support} />
-              </Grid>
-
-              {/* Developers */}
-              <Grid item xs={6} sm={3} md={6} lg={3}>
-                <LinkSection {...developers} />
-              </Grid>
-            </Grid>
-          </Grid>
-
-          {/* Subscribe */}
-          <Grid item xs={12} md={6} lg={5} xl={4}>
-            <Stack>
-              <Title sx={{ mb: 1 }}>{subscribe.title}</Title>
-
-              <Typography variant="body2" color="text.secondary">
-                {subscribe.subtitle}
-              </Typography>
-
-              <OutlinedButton arrow sx={{ height: 60, my: 3 }}>
-                Subscribe
-              </OutlinedButton>
-
-              <Stack
-                direction="row"
-                spacing={1}
-                alignItems="center"
-                justifyContent="space-between"
-                flexWrap="wrap"
-              >
-                {socials.map((item, i) => (
-                  <IconButton key={i}>
-                    <item.icon />
-                  </IconButton>
-                ))}
-              </Stack>
-            </Stack>
-          </Grid>
-        </Grid>
-
         <Divider sx={{ mt: 6, mb: 5 }} />
 
         <Stack

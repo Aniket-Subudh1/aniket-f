@@ -164,27 +164,6 @@ const Section1 = () => {
               sx={{ height: 58, px: 3 }}
             />
 
-            <CustomButton fullWidth={isSmallScreen}>
-              <AppleIcon sx={{ fontSize: 36, ml: -1 }} />
-
-              <Stack sx={{ textAlign: "left", ml: 1 }}>
-                <Typography variant="caption" sx={{ lineHeight: 1 }}>
-                  Download on the
-                </Typography>
-                <Typography variant="h5">App Store</Typography>
-              </Stack>
-            </CustomButton>
-
-            <CustomButton fullWidth={isSmallScreen}>
-              <GoogleIcon sx={{ fontSize: 36, ml: -1 }} />
-
-              <Stack sx={{ textAlign: "left", ml: 1 }}>
-                <Typography variant="caption" sx={{ lineHeight: 1 }}>
-                  Get in on
-                </Typography>
-                <Typography variant="h5">Google Play</Typography>
-              </Stack>
-            </CustomButton>
           </Stack>
         </Stack>
       </Container>

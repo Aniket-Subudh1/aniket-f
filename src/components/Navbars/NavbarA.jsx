@@ -12,6 +12,8 @@ import { NAVBAR_HEIGHT } from "../../constants";
 import useScrollPosition from "../../hooks/useScrollPosition";
 import { navbarContent } from "../../utils/content";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import CallMadeIcon from "@mui/icons-material/CallMade";
+import LanguageIcon from "@mui/icons-material/Language";
 import LaunchButton from "../Buttons/LaunchButton";
 import MenuIcon from "@mui/icons-material/Menu";
 
@@ -33,7 +35,7 @@ const LinkButton = ({ children, ...props }) => (
   </Stack>
 );
 
-const Navbar = () => {
+const NavbarA = () => {
   const scrollPosition = useScrollPosition();
 
   const theme = useTheme();
@@ -62,16 +64,28 @@ const Navbar = () => {
           justifyContent="space-between"
           flexWrap="wrap"
         >
-          {/* Logo */}
-          <img
-            src={Logo}
-            style={{
-              height: isMobile ? "40px" : "50px",
-              width: "auto", 
-              objectFit: "contain", 
-            }}
-            alt="Credify Logo"
-          />
+          {/* Logo and Business Text */}
+          <Stack direction="row" alignItems="center" spacing={2}>
+            <img
+              src={Logo}
+              style={{
+                height: isMobile ? "40px" : "50px",
+                width: "auto",
+                objectFit: "contain",
+              }}
+              alt="Credify Logo"
+            />
+            <Typography
+              variant={isMobile ? "body2" : "h6"}
+              sx={{
+                color: "text.secondary",
+                fontWeight: "bold",
+                textTransform: "uppercase",
+              }}
+            >
+              Business
+            </Typography>
+          </Stack>
 
           {/* Links */}
           {!isMobile && (
@@ -83,7 +97,7 @@ const Navbar = () => {
               sx={{ flex: 1 }}
               flexWrap="wrap"
             >
-            
+              {/* Add any additional links here if needed */}
             </Stack>
           )}
 
@@ -94,16 +108,16 @@ const Navbar = () => {
             </IconButton>
           ) : (
             <Stack direction="row" spacing={5} alignItems="center">
-              
               <LinkButton>
                 <Typography variant="body2">Home</Typography>
               </LinkButton>
               <LinkButton>
-                <Typography variant="body2">Business</Typography>
-              </LinkButton><LinkButton>
+                <Typography variant="body2">Student</Typography>
+              </LinkButton>
+              <LinkButton>
                 <Typography variant="body2">About</Typography>
               </LinkButton>
-              
+
               <LaunchButton sx={{ borderRadius: 3 }} />
             </Stack>
           )}
@@ -113,4 +127,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavbarA;

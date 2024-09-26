@@ -1,14 +1,17 @@
-import { Button } from "@mui/material";
+import { Button, Stack } from "@mui/material";
 import React from "react";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+import Signup from './../../pages/Signup';
+import Login from './../../pages/Login';
 
-const LaunchButton = ({ sx = {}, ...props }) => {
+
+const ConnectButton = ({ sx = {}, ...props }) => {
   return (
     <Button variant="contained" sx={{ borderRadius: 4, ...sx }} {...props}>
-      Login / Signup
+      Login
       <KeyboardArrowRightIcon />
     </Button>
   );
 };
 
-export default LaunchButton;
+export default ConnectButton;

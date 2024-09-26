@@ -12,8 +12,9 @@ import { NAVBAR_HEIGHT } from "../../constants";
 import useScrollPosition from "../../hooks/useScrollPosition";
 import { navbarContent } from "../../utils/content";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import LaunchButton from "../Buttons/LaunchButton";
+import ConnectButton from "../Buttons/ConnectButton";
 import MenuIcon from "@mui/icons-material/Menu";
+import LButton from "../Buttons/LButton";
 
 const { Logo } = navbarContent;
 
@@ -33,7 +34,7 @@ const LinkButton = ({ children, ...props }) => (
   </Stack>
 );
 
-const Navbar = () => {
+const NavbarL = () => {
   const scrollPosition = useScrollPosition();
 
   const theme = useTheme();
@@ -54,6 +55,8 @@ const Navbar = () => {
           [theme.breakpoints.up("lg")]: {
             maxWidth: "1380px!important",
           },
+
+
         }}
       >
         <Stack
@@ -95,16 +98,9 @@ const Navbar = () => {
           ) : (
             <Stack direction="row" spacing={5} alignItems="center">
               
-              <LinkButton>
-                <Typography variant="body2">Home</Typography>
-              </LinkButton>
-              <LinkButton>
-                <Typography variant="body2">Business</Typography>
-              </LinkButton><LinkButton>
-                <Typography variant="body2">About</Typography>
-              </LinkButton>
               
-              <LaunchButton sx={{ borderRadius: 3 }} />
+              <ConnectButton sx={{ borderRadius: 3 }} />
+              <LButton sx={{ borderRadius: 3 }} />
             </Stack>
           )}
         </Stack>
@@ -113,4 +109,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavbarL;

@@ -99,7 +99,7 @@ const NavbarL = () => {
             <Stack direction="row" spacing={5} alignItems="center">
               
               
-              <ConnectButton sx={{ borderRadius: 3 }} />
+              <ConnectButton  sx={{ borderRadius: 3 }} />
               <LButton sx={{ borderRadius: 3 }} />
             </Stack>
           )}

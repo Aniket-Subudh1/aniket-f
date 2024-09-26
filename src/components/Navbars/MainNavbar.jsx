@@ -14,6 +14,7 @@ import { navbarContent } from "../../utils/content";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import LaunchButton from "../Buttons/LaunchButton";
 import MenuIcon from "@mui/icons-material/Menu";
+import { Link } from "react-router-dom";
 
 const { Logo } = navbarContent;
 
@@ -63,7 +64,9 @@ const Navbar = () => {
           flexWrap="wrap"
         >
           {/* Logo */}
+         <Link to={'/'}>         
           <img
+          className="cursor-pointer"
             src={Logo}
             style={{
               height: isMobile ? "40px" : "50px",
@@ -71,7 +74,7 @@ const Navbar = () => {
               objectFit: "contain", 
             }}
             alt="Credify Logo"
-          />
+          /></Link>
 
           {/* Links */}
           {!isMobile && (
@@ -98,12 +101,16 @@ const Navbar = () => {
               <LinkButton>
                 <Typography variant="body2">Home</Typography>
               </LinkButton>
+              <Link to={'/h'}>
               <LinkButton>
                 <Typography variant="body2">Business</Typography>
-              </LinkButton><LinkButton>
-                <Typography variant="body2">About</Typography>
               </LinkButton>
-              
+              </Link>
+              <Link to={'/a'}>
+              <LinkButton>
+                <Typography variant="body2">Loan App</Typography>
+              </LinkButton>
+              </Link>
               <LaunchButton sx={{ borderRadius: 3 }} />
             </Stack>
           )}

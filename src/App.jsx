@@ -7,6 +7,7 @@ import "./App.css";
 import Login from "./pages/Login";
 import CourseDetailsPage from "./pages/CourseDetailsPage";
 import CoursesPage from "./pages/CoursePage";
+import AdvancedStudentLoanDashboard from './pages/AdvancedStudentLoanDashboard';
 
 
 
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="/l" element={<Login/>} />
         <Route path="/course/:id" element={<CourseDetailsPage/>} /> 
         <Route path="/c" element={<CoursesPage/>} />
+        <Route path="/A" element={<AdvancedStudentLoanDashboard/>} />
       </Routes>
     </div>
   );

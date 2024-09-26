@@ -16,6 +16,7 @@ import CallMadeIcon from "@mui/icons-material/CallMade";
 import LanguageIcon from "@mui/icons-material/Language";
 import LaunchButton from "../Buttons/LaunchButton";
 import MenuIcon from "@mui/icons-material/Menu";
+import { Link } from "react-router-dom";
 
 const { Logo } = navbarContent;
 
@@ -111,9 +112,11 @@ const NavbarA = () => {
               <LinkButton>
                 <Typography variant="body2">Home</Typography>
               </LinkButton>
+              <Link to={'/'}>
               <LinkButton>
                 <Typography variant="body2">Student</Typography>
               </LinkButton>
+              </Link>
               <LinkButton>
                 <Typography variant="body2">About</Typography>
               </LinkButton>
